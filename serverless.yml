@@ -64,13 +64,13 @@ functions:
           path: hello
           method: get
 
-#  product:
-#    handler: handlers/product/index.handler
-#    events: # All events associated with this function
-#      - http:
-#          path: /product
-#          method: ANY
-#
+  product:
+    handler: handlers/product/index.handler
+    events: # All events associated with this function
+      - http:
+          path: /product/{any+}
+          method: ANY
+
 #  user:
 #    handler: handlers/user/index.handler
 #    events: # All events associated with this function
